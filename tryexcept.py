@@ -1,6 +1,5 @@
 sayi1=input("sayi1:")
 sayi2=input("sayi2:")
-
 try:
     sayi1=int(sayi1)
     sayi2=int(sayi2)
@@ -13,3 +12,11 @@ except ZeroDivisionError:
 
 except(EnvironmentError,OverflowError):
     print("hata")
+print("-----------------------------------")
+try:
+    dosya = open("yazilimbilimi.txt","r")
+except IOError:
+    print("dosya bulunamadı")
+finally:
+    dosya.close()
+    print("dosya kapandı")
